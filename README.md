@@ -58,4 +58,3 @@ Serve both over HTTPS. The backend must be reachable from the browser and list t
 ## Security notes
 Passwords: bcrypt. Tokens: signed JWT holding only the user id (8h default); the role is read from the database on every request, so a forged role claim has no effect (tested). Login throttling is per process and in-memory. Institutions never receive staff identities or staff-written remarks. Audit events are append-only in application code but are **not tamper-proof** against a database administrator. The token is kept in `sessionStorage`; there is no refresh-token or server-side revocation (deactivating a user does block them immediately). No credentials are stored in the repository; demo passwords are generated at seed time.
 Earlier Supabase-based work is kept for reference in `legacy/` and is not used by the app.
-

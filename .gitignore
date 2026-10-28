@@ -1,0 +1,17 @@
+node_modules
+dist
+.env
+.env.local
+.tmp-tests
+.env.*
+!.env.example
+*.log
+backend/.env
+.venv/
+__pycache__/
+.pytest_cache/
+*.db
+*.sqlite3
+
+# User-uploaded documents (keep local; may contain sensitive content)
+backend/uploads/
